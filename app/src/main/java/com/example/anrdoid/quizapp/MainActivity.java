@@ -2,19 +2,17 @@ package com.example.anrdoid.quizapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int Score = 0;
+    int Score ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
         //show the Reset Button to reset a Score to 0
         VisibleResetButton();
 
-        EditText Name_EditText = (EditText) findViewById(R.id.name);
-        String name = Name_EditText.getText().toString();
+        EditText nameEditText = (EditText) findViewById(R.id.name);
+        String name = nameEditText.getText().toString();
 
         /*
         * Question 1
@@ -80,9 +78,7 @@ public class MainActivity extends AppCompatActivity {
         CheckBox Answer_Q3_3_CheckBox = (CheckBox) findViewById(R.id.answer_Q3_3);
         boolean isAnswerQ3_3 = Answer_Q3_3_CheckBox.isChecked();
 
-        if (isAnswerQ3_1 && isAnswerQ3_3) {
-            Score += 2;
-        } else if (isAnswerQ3_1 || isAnswerQ3_3) {
+        if (isAnswerQ3_1 && !isAnswerQ3_2 && !isAnswerQ3_3) {
             Score += 1;
         } else {
             Score += 0;
@@ -116,12 +112,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void displayScoreMessage(String name, int TotalScore) {
-        if (TotalScore == 5) {
-            Toast.makeText(this, "Congratulations ! :) " + name + " ,  Your Score: " + TotalScore + " /5", Toast.LENGTH_SHORT).show();
+        if (TotalScore == 4) {
+            Toast.makeText(this, "Congratulations ! :) " + name + " ,  Your Score: " + TotalScore + " /4", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "You're Lost :( " + name + " , Your Score: " + TotalScore + " /5", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You're Lost :( " + name + " , Your Score: " + TotalScore + " /4", Toast.LENGTH_SHORT).show();
         }
-
     }
 
     /*

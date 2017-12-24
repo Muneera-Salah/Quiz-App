@@ -28,24 +28,12 @@
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="Name"
-                android:textColor="#00796B"
-                android:textSize="25dp" />
+                style="@style/Header2TextStyle"
+                android:text="Name" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_weight="1"
-                android:text="Score"
-                android:textColor="#00796B"
-                android:textSize="25dp" />
+                style="@style/Header2TextStyle"
+                android:text="Score" />
 
         </LinearLayout>
 
@@ -82,7 +70,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="/5"
+                    android:text="/4"
                     android:textColor="#757575"
                     android:textSize="25dp" />
 
@@ -95,7 +83,6 @@
             android:layout_height="1dp"
             android:layout_marginBottom="16dp"
             android:background="@android:color/darker_gray" />
-
 
         <!-- Q1 -->
         <LinearLayout
@@ -223,7 +210,7 @@
                 style="@style/AnswerStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="100 / 2" />
+                android:text="100 / 5" />
 
         </LinearLayout>
 
