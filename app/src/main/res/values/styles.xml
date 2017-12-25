@@ -30,6 +30,13 @@
         <item name="android:textSize">25sp</item>
     </style>
 
+    <!-- Style for a Score Number -->
+    <style name="ScoreNumberStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
     <!-- Style for a Question number -->
     <style name="QuestionNumberStyle">
         <item name="android:padding">10dp</item>

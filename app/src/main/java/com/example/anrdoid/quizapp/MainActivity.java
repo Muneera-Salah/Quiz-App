@@ -36,19 +36,11 @@ public class MainActivity extends AppCompatActivity {
         /*
         * Question 1
          */
-        RadioButton Answer_Q1_10_RadioButton = (RadioButton) findViewById(R.id.answer_Q1_10);
-        boolean isAnswer_Q1_10 = Answer_Q1_10_RadioButton.isChecked();
-
-        RadioButton Answer_Q1_20_RadioButton = (RadioButton) findViewById(R.id.answer_Q1_20);
-        boolean isAnswer_Q1_20 = Answer_Q1_20_RadioButton.isChecked();
-
         RadioButton Answer_Q1_25_RadioButton = (RadioButton) findViewById(R.id.answer_Q1_25);
         boolean isAnswer_Q1_25 = Answer_Q1_25_RadioButton.isChecked();
 
         if (isAnswer_Q1_25) {
             Score += 1;
-        } else {
-            Score += 0;
         }
 
         /*
@@ -78,10 +70,8 @@ public class MainActivity extends AppCompatActivity {
         CheckBox Answer_Q3_3_CheckBox = (CheckBox) findViewById(R.id.answer_Q3_3);
         boolean isAnswerQ3_3 = Answer_Q3_3_CheckBox.isChecked();
 
-        if (isAnswerQ3_1 && !isAnswerQ3_2 && !isAnswerQ3_3) {
-            Score += 1;
-        } else {
-            Score += 0;
+        if (isAnswerQ3_1 && !isAnswerQ3_2 && isAnswerQ3_3) {
+            Score += 2;
         }
 
         /*
@@ -112,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void displayScoreMessage(String name, int TotalScore) {
-        if (TotalScore == 4) {
-            Toast.makeText(this, "Congratulations ! :) " + name + " ,  Your Score: " + TotalScore + " /4", Toast.LENGTH_SHORT).show();
+        if (TotalScore == 5) {
+            Toast.makeText(this, "Congratulations ! :) " + name + " ,  Your Score: " + TotalScore + " /5", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "You're Lost :( " + name + " , Your Score: " + TotalScore + " /4", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "You're Lost :( " + name + " , Your Score: " + TotalScore + " /5", Toast.LENGTH_SHORT).show();
         }
     }
 
